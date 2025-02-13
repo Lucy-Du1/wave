@@ -1,0 +1,15 @@
+body {
+    background-color: black;
+    color: white; /* 确保文本可见 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* 让内容在整个视口居中 */
+    margin: 0;
+}
+
+img {
+    max-width: 90%; /* 防止图片过大 */
+    height: auto;
+    transform: translateX(50px)
+}
