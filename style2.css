@@ -1,0 +1,79 @@
+body {
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    background-image: url("image/黑.png"); /* 设置背景图 */
+    background-size: cover; /* 让背景图片覆盖整个屏幕 */
+    background-position: center; /* 背景图居中显示 */
+    background-repeat: no-repeat; /* 防止图片重复 */
+    background-attachment: fixed; /* 使背景图固定 */
+    height: 100vh; /* 让背景图覆盖整个视口 */
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white; /* 确保文字颜色可见 */
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh; /* 让 main 占满整个屏幕高度 */
+    text-align: center;
+}
+
+.centered-img {
+    max-width: 100%; /* 控制最大宽度 */
+    height: auto; /* 保持比例 */
+}
+body {
+    font-family: 'Poppins', sans-serif; /* 默认使用 Poppins */
+    font-weight: 400; /* 设置默认字体粗细 */
+    font-size: 18px; /* 设置字体大小 */
+    line-height: 1.6; /* 行间距优化可读性 */
+    color: white;
+}
+
+h1 {
+    font-family: 'Outfit', sans-serif; /* 让 h1 使用 Outfit */
+    font-weight: 700; /* 使标题加粗 */
+    font-size: 20px;
+}
+.content {
+    display: flex;
+    justify-content: space-between; /* 让文字在两端排列 */
+    align-items: center;
+    width: 100vw; /* 让它占满整个视口宽度 */
+    padding: 0.1vw; /* 添加左右边距，避免文字紧贴屏幕 */
+}
+
+/* 三段文字样式 */
+.text {
+    text-align: center;
+}
+
+.small {
+    font-size: 13px;
+    font-weight: 300;
+    flex: 2; /* 2:4:4 的比例 */
+}
+
+.medium {
+    font-size: 20px;
+    font-weight: 500;
+    flex: 4;
+}
+
+.large {
+    font-size: 48px;
+    font-weight: 700;
+    flex: 4;
+}
+.small {
+    color: black;
+}
+
+.medium:nth-of-type(4) { 
+    color: black;
+}

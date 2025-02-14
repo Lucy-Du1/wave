@@ -6,10 +6,30 @@ body {
     align-items: center;
     height: 100vh; /* 让内容在整个视口居中 */
     margin: 0;
+    opacity: 1; /* 初始完全可见 */
+    transition: opacity 1s ease-in-out; /* 添加渐变过渡效果 */
+}
+body.fade-out {
+    opacity: 0; /* 页面淡出 */
 }
 
+a {
+    display: inline-block; /* 让 <a> 能正确包裹图片 */
+}
 img {
-    max-width: 90%; /* 防止图片过大 */
+    max-width: 95%;
     height: auto;
-    transform: translateX(50px)
+    display: block;
+    transform: translate(50px, 20px) !important; /* 向右移动50px，向下移动20px */
+    opacity: 0;
+    animation: fadeIn 2s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
