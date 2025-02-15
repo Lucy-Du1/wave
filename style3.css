@@ -52,6 +52,8 @@ h1 {
     color: rgb(0, 0, 0); /* 确保文字颜色可见 */
     z-index: 10; /* 确保标题位于其他内容之上 */
     height: 50px;
+    padding: 0;
+    gap: 4px; /* 控制元素间距 */
 }
 
 .header .title {
@@ -133,4 +135,7 @@ h1 {
     height: 100%;
     width: 0%;
     background-color: #002e69; /* 进度部分为黑色 */
+}
+.header div {
+    margin: 0 10px; /* 控制标题间距 */
 }

@@ -54,7 +54,8 @@ h1 {
     z-index: 10; /* 确保标题位于其他内容之上 */
     height: 50px;
     padding: 0;
-    gap: 5px; /* 控制元素间距 */
+    gap: 4px; /* 控制元素间距 */
+    font-family: 'Outfit', sans-serif;
 }
 
 .header .title {
@@ -152,11 +153,12 @@ h1 {
 }
 
 .frequency-item {
-    font-size: inherit; /* 继承原有字体 */
+    font-family: 'Outfit', sans-serif; /* 继承原有字体 */
     color: inherit; /* 继承原有颜色 */
+    font-weight: 300;
+    font-size: 15px;
 }
 
 .header div {
-    font-size: inherit;
-    color: inherit;
     margin: 0 10px; /* 控制标题间距 */
+}
