@@ -19,6 +19,15 @@
         <div class="header">
             <div><a href="index.html" class="link">SoundUtopia</a></div>
             <div id="Frequencies" class="clickable">Frequencies</div>
+            <div id="frequencies-list" class="hidden">
+                <div class="frequency-item">396Hz</div>
+                <div class="frequency-item">417Hz</div>
+                <div class="frequency-item">528Hz</div>
+                <div class="frequency-item">639Hz</div>
+                <div class="frequency-item">741Hz</div>
+                <div class="frequency-item">852Hz</div>
+                <div class="frequency-item">963Hz</div>
+            </div>
             <div>Pause</div>
         </div>
         
@@ -27,15 +36,6 @@
             <div class="medium">The Root Chakra</div>
             <div class="small">It works to cleanse feelings of guilt, fear, and trauma by bringing down defense mechanisms.</div>
             <div class="medium"><a href="2.html" class="link">Next</a></div>
-        </div>
-        <div id="frequencies-list" class="hidden">
-            <div class="frequency-item">396Hz</div>
-            <div class="frequency-item">417Hz</div>
-            <div class="frequency-item">528Hz</div>
-            <div class="frequency-item">639Hz</div>
-            <div class="frequency-item">741Hz</div>
-            <div class="frequency-item">852Hz</div>
-            <div class="frequency-item">963Hz</div>
         </div>
 
         <iframe id="soundcloud-player"
@@ -94,17 +94,18 @@
             });
         });
     </script>
-<script>
-    document.addEventListener("DOMContentLoaded", function () {
-        let frequenciesBtn = document.getElementById("Frequencies");
-        let frequenciesList = document.getElementById("frequencies-list");
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+    let frequenciesBtn = document.getElementById("Frequencies");
+    let frequenciesList = document.getElementById("frequencies-list");
 
-        frequenciesBtn.addEventListener("click", function () {
-            frequenciesList.classList.toggle("hidden"); // 切换隐藏/显示
-        });
+    frequenciesBtn.addEventListener("click", function () {
+        frequenciesBtn.style.display = "none"; // 隐藏 "Frequencies"
+        frequenciesList.style.display = "flex"; // 显示 7 个频率
     });
-</script>
-
+});
+    </script>
+    
     
   </body>
 </html>
