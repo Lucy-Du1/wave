@@ -94,17 +94,17 @@
             });
         });
     </script>
-
 <script>
-    document.getElementById("Frequencies").addEventListener("click", function () {
-        let freqList = document.getElementById("frequencies-list");
-        if (freqList.style.display === "flex") {
-            freqList.style.display = "none"; // 隐藏
-        } else {
-            freqList.style.display = "flex"; // 显示
-        }
+    document.addEventListener("DOMContentLoaded", function () {
+        let frequenciesBtn = document.getElementById("Frequencies");
+        let frequenciesList = document.getElementById("frequencies-list");
+
+        frequenciesBtn.addEventListener("click", function () {
+            frequenciesList.classList.toggle("hidden"); // 切换隐藏/显示
+        });
     });
 </script>
 
+    
   </body>
 </html>
