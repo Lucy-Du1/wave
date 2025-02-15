@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>My Website</title>
+    <link rel="stylesheet" href="./style3.css">
+    <link rel="icon" href="./favicon.ico" type="image/x-icon">
+    <style>
+        body {
+            opacity: 0;
+            transition: opacity 1s ease-in-out;
+        }
+    </style>
+  </head>
+  <body>
+    <main>
+        <div class="header">
+            <div>SoundUtopia</div>
+            <div>Frequencies</div>
+            <div>Pause</div>
+        </div>
+
+        <div class="content">
+            <div class="medium">741Hz</div>
+            <div class="medium">The Throat Chakra</div>
+            <div class="small">It works to promot open expression and sharing is related to problem-solving ability.</div>
+            <div class="medium"><a href="3.html" class="link">Next</a></div>
+        </div>
+        <iframe id="soundcloud-player-2"
+        class="hidden-audio"
+        scrolling="no" 
+        frameborder="no" 
+        allow="autoplay" 
+        src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1057884682&auto_play=true&hide_related=true&show_comments=false&show_user=false&show_reposts=false&visual=false&start=0&end=120">
+    </iframe>
+
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let iframe = document.getElementById("soundcloud-player");
+            let widget = SC.Widget(iframe); // 初始化 SoundCloud 控制器
+
+            widget.bind(SC.Widget.Events.READY, function () {
+                widget.play(); // 播放音频
+            });
+        });
+    </script>
+    </main>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            document.body.style.opacity = 1; 
+        });
+    </script>
+     <!-- 进度条 -->
+     <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>
+
+</main>
+
+<script src="https://w.soundcloud.com/player/api.js"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        let iframe = document.getElementById("soundcloud-player");
+        let widget = SC.Widget(iframe); // 初始化 SoundCloud 控制器
+        let progressBar = document.getElementById('progress-bar');
+
+        widget.bind(SC.Widget.Events.READY, function () {
+            widget.play(); // 当 iframe 加载完毕后自动播放
+        });
+
+        widget.bind(SC.Widget.Events.PLAY, function () {
+            // 每秒更新一次进度条
+            setInterval(function () {
+                widget.getPosition(function(position) {
+                    widget.getDuration(function(duration) {
+                        let progress = (position / duration) * 100; // 计算进度百分比
+                        progressBar.style.width = progress + "%"; // 更新进度条宽度
+                    });
+                });
+            }, 1000);
+        });
+    });
+</script>
+  </body>
+</html>
