@@ -17,8 +17,8 @@
   <body>
     <main>
         <div class="header">
-            <div>SoundUtopia</div>
-            <div id="Frequencies">Frequencies</div>
+            <div><a href="index.html" class="link">SoundUtopia</a></div>
+            <div id="Frequencies" class="clickable">Frequencies</div>
             <div>Pause</div>
         </div>
         
@@ -28,6 +28,16 @@
             <div class="small">It works to cleanse feelings of guilt, fear, and trauma by bringing down defense mechanisms.</div>
             <div class="medium"><a href="2.html" class="link">Next</a></div>
         </div>
+        <div id="frequencies-list" class="hidden">
+            <div class="frequency-item">396Hz</div>
+            <div class="frequency-item">417Hz</div>
+            <div class="frequency-item">528Hz</div>
+            <div class="frequency-item">639Hz</div>
+            <div class="frequency-item">741Hz</div>
+            <div class="frequency-item">852Hz</div>
+            <div class="frequency-item">963Hz</div>
+        </div>
+
         <iframe id="soundcloud-player"
     class="hidden-audio"
     scrolling="no" 
@@ -84,5 +94,17 @@
             });
         });
     </script>
+
+<script>
+    document.getElementById("Frequencies").addEventListener("click", function () {
+        let freqList = document.getElementById("frequencies-list");
+        if (freqList.style.display === "flex") {
+            freqList.style.display = "none"; // 隐藏
+        } else {
+            freqList.style.display = "flex"; // 显示
+        }
+    });
+</script>
+
   </body>
 </html>

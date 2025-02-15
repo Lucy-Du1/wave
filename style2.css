@@ -131,3 +131,26 @@ h1 {
     width: 0%;
     background-color: rgb(204, 43, 34); /* 进度部分为黑色 */
 }
+
+#frequencies-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.frequency-item {
+    flex: 1;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.hidden {
+    display: none;
+}
+
+.clickable {
+    cursor: pointer;
+}
