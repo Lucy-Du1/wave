@@ -83,7 +83,7 @@ h1 {
 
 .small {
     font-size: 14px;
-    font-weight: 400;
+    font-weight: 300;
     max-width: 30%; /* 控制长度，换行到两行 */
     text-align: left; 
     color: white;
